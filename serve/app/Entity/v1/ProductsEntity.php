@@ -4,13 +4,14 @@ namespace App\Entity\v1;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Laravel\Passport\HasApiTokens;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use App\Entity\v1\CategoriesEntity;
 
 class ProductsEntity extends Model
 {
-    use SoftDeletes;
+    use HasApiTokens, SoftDeletes;
 
     protected $table = 'products';
     public static $name_table = 'products';

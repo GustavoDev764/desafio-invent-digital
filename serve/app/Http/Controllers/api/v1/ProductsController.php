@@ -16,6 +16,8 @@ class ProductsController extends Controller
     private $categoriaT = '';
     private $name_table = '';
 
+    protected $guard = 'users';
+
     public function __construct()
     {
         $this->categoriaT  = CategoriesEntity::$name_table;
@@ -108,7 +110,7 @@ class ProductsController extends Controller
 
     public function delete(Request $request){
         try {
-            $id = $request->input('id');
+            $id = $request->id;
 
             //Validando o produto
             $validator = Validator::make(['id'=>$id],[

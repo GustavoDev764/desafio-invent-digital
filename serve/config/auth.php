@@ -41,7 +41,7 @@ return [
             'provider' => 'users',
         ],
 
-        'api' => [
+        'auth_api_v1' => [
             'driver' => 'passport',
             'provider' => 'users',
             'hash' => false,

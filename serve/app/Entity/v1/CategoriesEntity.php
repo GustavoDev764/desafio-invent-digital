@@ -3,11 +3,14 @@
 namespace App\Entity\v1;
 
 use Illuminate\Database\Eloquent\Model;
+use Laravel\Passport\HasApiTokens;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Facades\DB;
 
 class CategoriesEntity extends Model
 {
+    use HasApiTokens;
+
     protected $table = 'categories';
 
     public static $name_table = 'categories';
